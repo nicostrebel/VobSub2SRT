@@ -44,6 +44,8 @@ install(FILES "${CMAKE_SOURCE_DIR}/debian/copyright" DESTINATION ${INSTALL_DOC_D
 install(FILES "${CMAKE_SOURCE_DIR}/README.org" DESTINATION ${INSTALL_DOC_DIR} RENAME README)
 
 add_definitions("-DINSTALL_PREFIX=\"${CMAKE_INSTALL_PREFIX}\"")
+add_compile_definitions(CONFIG_TESSERACT_NAMESPACE)
+set(CMAKE_CXX_STANDARD 11)
 
 include(CheckIncludeFile)
 include(CheckCCompilerFlag)
